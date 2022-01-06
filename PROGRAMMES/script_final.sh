@@ -6,6 +6,7 @@
 
 
 source ./bin/fonctions.sh
+source ./bin/cree_tableau.sh
 
 #répertoire des fichiers contenant des urls 
 REP_URLS=$1
@@ -79,7 +80,7 @@ do
       
       #le nom complet du fichier de l'url aspirée
       NOM_FIC_PA=""
-      NOM_FIC_PA_UTF8=""
+      NOM_FIC_DT_UTF8=""
       NOM_FIC_DT=""
       NOM_FIC_CT=""
       NOM_FIC_FW=""
