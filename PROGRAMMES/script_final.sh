@@ -5,7 +5,7 @@
 #-------------------------------------------------------
 
 
-source fonctions_v4.sh
+source ./bin/fonctions.sh
 
 #répertoire des fichiers contenant des urls 
 REP_URLS=$1
