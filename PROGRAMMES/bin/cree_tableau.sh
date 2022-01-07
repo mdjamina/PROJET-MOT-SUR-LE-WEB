@@ -157,10 +157,7 @@ function html_table(){
     
         <tr>
             <th colspan=\"11\" align=\"center\" bgcolor=\"blue\">
-                <b>Tableau n° $CPT_TABLE</b> <span>(Fichier: $FICHIER )</span><img
-  src="https://flagcdn.com/za.svg"
-  width="30"
-  alt="South Africa"> 
+                <b>Tableau n° $CPT_TABLE</b> <span>(Fichier: $FICHIER )</span>
             </th>
         </tr>
         <tr><th>N°</th><th>URL</th><th>CODE HTTP</th><th>PAGE ASPIREE</th><th>Encodage</th><th>DUMP-TEXT<br><span>(UTF-8)</span></th>

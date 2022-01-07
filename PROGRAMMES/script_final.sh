@@ -15,7 +15,7 @@ REP_URLS=$1
 TABLEAU_HTML=$2"index.html"
 
 
-MOTIFS="منع|حمل|피임|حبوب|politique"
+MOTIFS="منع|حمل|피임|حبوب|anticoncepción"
 
 
 
