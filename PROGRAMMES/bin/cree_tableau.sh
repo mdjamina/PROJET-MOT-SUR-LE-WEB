@@ -83,6 +83,22 @@ function html_close(){
 
 function html_body(){
     echo "<body><p align=\"center\"><hr color=\"blue\" width=\"50%\"/></p>" 
+
+    echo "<h1>Sujet : le mot '<b>contraception</b>' (langues : Coréen, Espagnol, Arabe)</h1>"
+    echo "<h2><a href="https://traitementautomatiquedeslangues362220491.wordpress.com/">Le blog</a></h2>"
+    echo "<h2><a href="https://github.com/mdjamina/PROJET-MOT-SUR-LE-WEB">GitHub</a></h2>"
+   
+    echo "<h1>Participants:</h1>
+    <ul>
+        <li>Amina DJARFI MELOUAH</li>
+        <li>Marina SEGHIER</li>
+        <li>Omaira LUIS-GONZALEZ</li>
+    </ul>
+    <p align=\"center\"><hr color=\"blue\" width=\"50%\"/></p>"
+
+    
+
+
 }
 
 function html_body_close(){
@@ -99,6 +115,11 @@ function html_table(){
                 <b>Tableau n° $CPT_TABLE</b> <span>(Fichier: $FICHIER )</span>
             </th>
         </tr>
+            <tr>
+        <th colspan="11" align="center" bgcolor="blue">
+            <b>Motifs:</b> <span>$MOTIFS</span>
+        </th>
+    </tr>
         <tr><th>N°</th><th>URL</th><th>CODE HTTP</th><th>PAGE ASPIREE</th><th>Encodage</th><th>DUMP-TEXT<br><span>(UTF-8)</span></th>
         <th>Contexte</th><th>Nombre<br>Motif</th><th>Index</th><th>Bigramme</th></tr>
         "
