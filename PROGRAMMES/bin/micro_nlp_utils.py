@@ -1,12 +1,24 @@
 #!/usr/bin/python
 import sys, getopt
 from konlpy.tag import Okt
+import codecs
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
 
-def tokenize(text):
-    
+
+
+def tokenize(text,lang='fr'):
+    """
+    https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1
+    """    
     #Initialize the class as an object
-    okt=Okt()
-    return okt.morphs(text.replace('\n',' '))
+    if lang in ['ja','as','ko','ks','zh']:
+        okt=Okt()
+        return okt.morphs(text.replace('\n',' '))
+
+    return word_tokenize(text)
+
+    
 
 def set_getops(argv):
     global input_file
@@ -16,10 +28,10 @@ def set_getops(argv):
     process=""
 
     try:
-        opts, args = getopt.getopt(argv,"hi:g:",["in_file=","get="])
+        opts, args = getopt.getopt(argv,"hi:g:l:",["in_file=","get=","lang="])
 
     except getopt.GetoptError:
-      print('script.py -i <inputfile> -g <index/bigrams>')
+      print('script.py -i <inputfile> -g <index/bigrams> -l <lang>')
       sys.exit(2)
     
     for opt, arg in opts:
@@ -30,6 +42,8 @@ def set_getops(argv):
          input_file = arg
       elif opt in ("-g", "--get"):
          process = arg
+      elif opt in ("-l", "--lang"):
+         lang = arg
 
 
 def read_file(file_path):

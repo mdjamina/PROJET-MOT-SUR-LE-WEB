@@ -15,8 +15,8 @@ REP_URLS=$1
 TABLEAU_HTML=$2"index.html"
 
 
-#MOTIFS="منع|حمل|피임|حبوب|anticoncepción|preservativo|anticonceptivos"
-MOTIFS=$3
+MOTIFS="منع|حمل|피임|حبوب|anticoncepción|preservativo|anticonceptivos"
+#MOTIFS=$3
 
 
 
@@ -81,11 +81,18 @@ do
    
    CPT_URL=0
 
+   #https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1
+
+   LANGUE=$(echo $FICHIER | cut -d'.' -f1 | cut -d'_' -f2)
+
    logInfo "Traitement du fichier n°$CPT_TABLE : "$FICHIER
+   logInfo "code langue : "$LANGUE
    logInfo "        "
-   while read URL
+   while read ligne
    do
       logSeparateur "-"
+
+      URL=$(echo $ligne | cut -d'_' -f1)
 
       #compteur des urls
       CPT_URL=$(($CPT_URL+1))
@@ -102,6 +109,7 @@ do
       COMPTEUR_MOTIFS=""
       ENCODAGE=""
       CHECK_ENCODAGE=-1
+      
 
       #vérification du code status http 
       codeHTTP=$(curl -sIL -m 15 -w '%{http_code}\n' -o http_head $URL | tr -d '\r\n');

@@ -241,7 +241,7 @@ function calcul_index(){
         #egrep -i -o "\w+" $NOM_FIC_DT | sort | uniq -c  | sort -r -n -s -k 1,1 > $NOM_FIC_FW 2>$REP_LOG/command.log \
          #       && log_success "Calcul index" || log_failure "Calcul index Error:"`cat $REP_LOG/command.log`
 
-        python3 ./bin/micro_nlp_utils.py 	-i $NOM_FIC_DT_UTF8 --get=index >$NOM_FIC_FW 2>$REP_LOG/command.log \
+        python3 ./bin/micro_nlp_utils.py -i $NOM_FIC_DT_UTF8 --get=index --lang=$LANGUE >$NOM_FIC_FW 2>$REP_LOG/command.log \
                     && log_success "Calcul index" || log_failure "Calcul index:"`cat $REP_LOG/command.log` ;
 
         [[ $(check_error) == 0 ]] || NOM_FIC_FW=""
