@@ -23,9 +23,11 @@ def tokenize(text,lang='fr'):
 def set_getops(argv):
     global input_file
     global process
+    global lang
 
     input_file=""
     process=""
+    lang=""
 
     try:
         opts, args = getopt.getopt(argv,"hi:g:l:",["in_file=","get=","lang="])
@@ -62,7 +64,7 @@ def main(argv):
     #print(input_file)
     text = read_file(input_file)
 
-    words = tokenize(text)
+    words = tokenize(text,lang=lang)
 
     if process=='index':
         #print('-----------------')
