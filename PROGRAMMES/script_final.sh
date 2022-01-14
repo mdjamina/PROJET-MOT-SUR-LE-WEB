@@ -15,8 +15,8 @@ REP_URLS=$1
 TABLEAU_HTML=$2"index.html"
 
 
-MOTIFS="منع|حمل|피임|حبوب|anticoncepción|preservativo|anticonceptivos"
-#MOTIFS=$3
+#MOTIFS="منع|حمل|피임|حبوب|anticoncepción|preservativo|anticonceptivos"
+MOTIFS=$3
 
 
 
@@ -88,11 +88,12 @@ do
    logInfo "Traitement du fichier n°$CPT_TABLE : "$FICHIER
    logInfo "code langue : "$LANGUE
    logInfo "        "
-   while read ligne
+   while read URL
    do
       logSeparateur "-"
 
-      URL=$(echo $ligne | cut -d'_' -f1)
+      #URL=$(echo $ligne | cut -d'_' -f1)
+      
 
       #compteur des urls
       CPT_URL=$(($CPT_URL+1))
