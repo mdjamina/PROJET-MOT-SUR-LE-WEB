@@ -85,7 +85,8 @@ function html_body(){
     echo "<body><p align=\"center\"><hr color=\"blue\" width=\"50%\"/></p>" 
 
     echo "<h1>Sujet : le mot '<b>contraception</b>' (langues : Coréen, Espagnol, Arabe)</h1>"
-    echo "<h2><a href="https://traitementautomatiquedeslangues362220491.wordpress.com/">Le blog</a></h2>"
+    echo "<h2><a href=https://traitementautomatiquedeslangues362220491.wordpress.com/>Le blog: script</a></h2>
+            <h2><a href=https://lemotcontraception.wordpress.com/>Le blog: iTrameur</a></h2>"
     echo "<h2><a href="https://github.com/mdjamina/PROJET-MOT-SUR-LE-WEB">GitHub</a></h2>"
    
     echo "<h1>Participants:</h1>
